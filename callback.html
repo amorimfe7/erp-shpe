@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Callback Shopee</title>
+</head>
+<body style="font-family: Arial; padding: 40px;">
+  <h2>Autorização Recebida!</h2>
+  <p>A loja foi autorizada com sucesso. Você já pode voltar ao sistema.</p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code");
+    const shop_id = params.get("shop_id");
+
+    document.body.innerHTML += `<p><strong>Code:</strong> ${code}</p>`;
+    document.body.innerHTML += `<p><strong>Shop ID:</strong> ${shop_id}</p>`;
+  </script>
+</body>
+</html>
